@@ -1,0 +1,10 @@
+
+public class Ex06_Oracle_PreparedStatement {
+
+	public static void main(String[] args) {
+		Connection conn=null;
+		Prepared
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package kr.or.kosta.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class SingletonHelper {
+	private static SingletonHelper sh;
+
+	public static synchronized SingletonHelper getInstance() {
+		if (sh == null) {
+			sh = new SingletonHelper();
+		}
+		return sh;
+	}
+
+	private SingletonHelper() {
+	}
+
+	public static Connection getConnection(String dsn) {
+		Connection conn = null;
+		try {
+			if (dsn.equals("mysql")) {
+				Class.forName("com.mysql.jdbc.Driver");
+				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kostadb", "kosta", "1004");
+
+			} else if (dsn.equals("oracle")) {
+
+				Class.forName("oracle.jdbc.OracleDriver");
+				conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "kglim", "1004");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			return conn;
+		}
+
+	}
+}

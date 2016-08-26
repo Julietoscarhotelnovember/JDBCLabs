@@ -1,0 +1,27 @@
+import java.security.GeneralSecurityException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import kr.or.kosta.utils.ConnectionHelper;
+import kr.or.kosta.utils.SingletonHelper;
+
+public class Ex05_Connection_Helper_Singleton {
+
+	public static void main(String[] args) throws SQLException {
+		Connection conn = null;
+		
+		conn = SingletonHelper.getInstance().getConnection("oracle");
+		System.out.println(conn.toString());
+		System.out.println(conn.isClosed());
+		System.out.println(conn.getMetaData().getDatabaseProductName());
+		SingletonHelper.getInstance().close(conn);
+		
+		conn = SingletonHelper.getInstance().getConnection("mysql");
+		System.out.println(conn.toString());
+		System.out.println(conn.isClosed());
+		System.out.println(conn.getMetaData().getDatabaseProductName());
+		SingletonHelper.getInstance().close(conn);	
+
+	}
+
+}

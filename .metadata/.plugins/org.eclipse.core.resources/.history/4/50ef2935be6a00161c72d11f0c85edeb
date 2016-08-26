@@ -1,0 +1,14 @@
+package Quiz1;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+import kr.or.kosta.utils.ConnectionHelper;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Login login=new Login();
+		login.regID();
+	}
+}

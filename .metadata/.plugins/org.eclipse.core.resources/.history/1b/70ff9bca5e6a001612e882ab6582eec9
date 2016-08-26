@@ -1,0 +1,15 @@
+package kr.or.kosta.utils;
+
+public class SingletonHelper {
+	private static SingletonHelper sh;
+
+	public static synchronized SingletonHelper getInstance() {
+		if (sh == null) {
+			sh = new SingletonHelper();
+		}
+		return sh;
+	}
+
+	private SingletonHelper() {
+	}
+}

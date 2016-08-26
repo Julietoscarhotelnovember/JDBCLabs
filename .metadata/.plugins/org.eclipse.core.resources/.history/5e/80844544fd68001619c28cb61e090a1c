@@ -1,0 +1,19 @@
+import java.sql.DriverManager;
+
+// 설치 후 나중에 뺀다 ->
+		 * 싱클톤 패턴 System.out.println("드라이버 로딩");
+		 * 
+		 * conn =
+		 * DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",
+		 * "kglim", "1004"); System.out.println("연결 시도");
+		 * System.out.println(conn.isClosed() + "False 연결 성공"); } catch
+		 * (Exception e) { System.out.println(e.getMessage()); }
+		 
+		 Class.forName("oracle.jdbc.OracleDriver");
+			System.out.println("드라이버 로딩");
+
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "kglim", "1004");
+			// 반환값 connection 타입
+			System.out.println("연결 시도");
+			System.out.println(conn.isClosed() + "너 닫혀있늬?"); // false 값을 도출해야함
+			

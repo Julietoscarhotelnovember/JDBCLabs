@@ -1,0 +1,12 @@
+/*
+1.자바를 통해 오라클 db 연동하기
+2.app(자바) <- jdbc api -> 오라클전용 드라이버 -> 오라클db에 접속
+3.드라이버는 각 db벤더에 사이트에서 받음됨(오라클: ojdbc6.jar)
+*/
+public class Ex01_Oracle_Connect {
+
+	public static void main(String[] args) {
+		System.out.println("Oracle");
+
+	}
+}

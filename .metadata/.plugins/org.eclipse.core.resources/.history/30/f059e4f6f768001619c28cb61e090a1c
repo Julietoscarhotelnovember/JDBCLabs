@@ -1,0 +1,8 @@
+
+public class Ex01_Oracle_Connect {
+
+	public static void main(String[] args) {
+		System.out.println("Oracle");
+
+	}
+}

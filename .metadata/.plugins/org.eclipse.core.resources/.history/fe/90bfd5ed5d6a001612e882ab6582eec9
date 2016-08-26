@@ -1,0 +1,9 @@
+package kr.or.kosta.utils;
+
+public class SingletonHelper {
+
+	public SingletonHelper() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
